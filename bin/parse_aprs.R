@@ -3,6 +3,11 @@ library(dplyr)
 library(ggplot2)
 library("leaflet")
 
+# TODO
+#- This only shows TX packets now, need RX packets (different delimiters)
+#- Use nearest timestamp of TX packet to guess where each RX packet was received,
+#- add a potential error circle (longer difference in timestamp, bigger circle.)
+
 # Read data
 d_raw <- readLines("data/APRS data from Pembina Gorge 2020-09-18.txt") %>% 
             as.data.frame() %>% 
